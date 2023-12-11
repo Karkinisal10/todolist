@@ -22,11 +22,20 @@
     </form>
 
     <!-- Your todo list goes here -->
-    <ul class="todo-list">
-   {{#each todos}}
-        <li class="todo-item">{{this.todo}}</li>
-    {{/each}}
-    </ul>
+    <table class="todo-table" style="border: 1px solid #000;">
+      <thead>
+        <tr>
+          <th style="border: 1px solid #000;">Todo Items</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each todos}}
+        <tr>
+          <td style="border: 1px solid #000;">{{this.todo}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>

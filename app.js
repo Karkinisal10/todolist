@@ -44,5 +44,5 @@ app.use(require("./routes/todo"))
 
 
 app.listen(80,() => {
-    console.log("Lisening on port 80");
+    console.log("Lisening on port 80 .");
 })

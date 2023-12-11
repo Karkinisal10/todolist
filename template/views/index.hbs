@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="public/styles/style.css">
+</head>
+<body>
+  <!-- Navbar Partial -->
+  <header>
+    {{> navbar}}
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Todo App</h1>
+    
+    <!-- Form for adding a new todo -->
+    <form action="/todoclick" method="POST">
+      <input type="text" id="new-todo" name="newTodo" placeholder="Add a new todo">
+      <button type="submit">Add Todo</button>
+    </form>
+
+    <!-- Your todo list goes here -->
+    <ul class="todo-list">
+   {{#each todos}}
+        <li class="todo-item">{{this.todo}}</li>
+    {{/each}}
+    </ul>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
